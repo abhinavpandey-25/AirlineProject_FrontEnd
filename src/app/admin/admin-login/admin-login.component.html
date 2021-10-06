@@ -1,0 +1,42 @@
+<app-home-dashboard></app-home-dashboard>
+    <body>
+        <div class="form-box">
+          <div class="header-text">
+            Admin Form
+          </div>
+          <form autocomplete="off" [formGroup]="adminForm"  (ngSubmit)="loginAdmin()"  novalidate>
+              <div class="txtb">
+                <input style="font-size: 20px;" formControlName="email" type="email" class="form-control"  placeholder="Email">
+                <div *ngIf="submitted && adminForm.controls.email.errors" class="error">
+                  <div class="text-danger" *ngIf="adminForm.controls.email.errors.required">
+                    Email is required
+                  </div>
+                </div>
+                </div>
+                <div  class="txtb">
+                  <input style="font-size: 20px;" formControlName="password" type="password" class="form-control"  placeholder="Password"/>
+                  <div  *ngIf="submitted && adminForm.controls.password.errors" class="error">
+                   <div class="text-danger" *ngIf="adminForm.controls.password.errors.required" >
+                     Enter minimum 6 characters
+                   </div>
+                  </div>
+                </div>  
+                <div > <button class="logbtn" style="margin: 20px 0px;" type="submit">SUBMIT</button></div>          
+                <!-- <div class="txtb">
+                  <input type="email" style="font-size: 20px;" placeholder="Email" [(ngModel)]="email" required>
+                 
+                </div>
+            
+                <div class="txtb">
+                  <input type="password" style="font-size: 20px;" placeholder="Password" [(ngModel)]="password">
+                  
+                </div>
+                <div  *ngIf = "bol" class="bottom-text" style="color: red;">Please enter valid credentials</div>
+                <input type="submit" class="logbtn" style="font-size: 25px; font-weight: 500; margin-bottom: 5px;" value="Login" (click)="loginAdmin()">
+                
+            </div> -->
+            </form>
+            </div>
+    </body>
+    
+   

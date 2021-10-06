@@ -1,0 +1,60 @@
+<body>
+    
+
+    <div class="container mt-2"><br>
+        <div class="row">
+            <div class="col-9 mb-3 booking-form">
+                <input class="form-control" type="number" [(ngModel)]="flightId" placeholder="Enter flight ID">
+            </div>
+            <div class="col-3" >
+                <button  class="btn btn-primary flight"  (click)="onSearch()">SEARCH</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container mt-2" [hidden] = "viewTable">
+        <table style="text-align: center" padding="5px" class=" table table-hover table-bordered opacity: 0.9">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 11%">
+            <col style="width: 8%">
+            <thead style="background-color: cornflowerblue">
+                <tr>
+                    <th>FLIGHT ID</th>
+                    <th>FLIGHT NAME</th>
+                    <th>SOURCE</th>
+                    <th>DESTINATION</th>
+                    <th>DEPARTURE DATE & TIME</th>
+                    <th>ARRIVAL DATE & TIME</th>
+                    <th>ECONOMY SEATS</th>
+                    <th>BUSINESS SEATS</th>
+                    <th>ECONOMY SEAT COST</th>
+                    <th>BUSINESS SEAT COST</th> 
+                </tr>
+            </thead>
+            <tbody  style="font-family: 'Kaushan Script', cursive; background-color: cadetblue;opacity: 0.9">
+                <tr  >
+                    <td>{{flight.flightId}}</td>
+                    <td>{{flight.flightName}}</td>
+                    <td>{{flight.source}}</td>
+                    <td>{{flight.destination}}</td>
+                    <td>{{flight.departureDate}} {{flight.departureTime}}</td>
+                    <td>{{flight.arrivalDate}} {{flight.arrivalTime}}</td>
+                    <td>{{flight.economicSeats}}</td>
+                    <td>{{flight.businessSeats}}</td>
+                    <td>{{flight.economyCost}}</td>
+                    <td>{{flight.businessCost}}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+    </div>
+    </body>

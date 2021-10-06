@@ -1,0 +1,135 @@
+* {vertical-align: top;}
+
+
+
+body{
+    margin: 0;
+    background: url("../../../assets/mm.jpeg") no-repeat fixed center ;
+    
+    font-family: poppins;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+ width: 100%; 
+
+  /* height: auto; */
+}
+ 
+.booking-form-box{
+  max-width: 650px;
+  margin: 3% auto 0;
+  max-height: fit-content;
+  border-radius: 5px;
+ background-color: rgba(0, 0, 0, 0.5);   
+ box-shadow: 0 0 10px #000;
+  position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.booking-form{
+  padding: 0 20px 20px;
+}
+/*
+.booking-form label{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+  color:rgb(0, 0, 0);
+}
+*/
+.booking-form :label {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 10px;
+  
+	top: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.booking-form-box .header-text {
+	font-size: 32px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+}
+/*
+.form-control{
+  font-size: 12px !important;
+  border-radius: 0!important;
+  color: rgb(0, 0, 0) !important ;
+  background: transparent !important;
+  box-shadow: none !important;  
+}*/
+.form-control{
+  font-size: 15px !important;
+  border-radius: 5px !important;
+ 
+  color: rgb(0, 0, 0) !important ;
+}
+
+.input-grp{
+  width: 560px;
+  display: inline-block;
+  /*border: black;*/
+ 
+  
+}
+.input-grp-grp{
+  width: 270px;
+  margin-right: 20px;
+  display: inline-block;
+  /*border: black;*/
+  
+}
+.grp{
+  font-family: Arial, Helvetica, sans-serif;
+  
+  color: rgb(223, 220, 228);
+  width: 400px;
+  display: inline-block;
+  border: black;
+ 
+  
+}
+input::placeholder{
+  color: rgb(88, 86, 86) !important;
+}
+/* .select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin:0; 
+}
+.select-date::-webkit-calendar-picker-indicator{
+  background: transparent !important;
+} */
+.flight{
+  width: 30%;
+  padding: 9px 0 !important;
+  font-size: 17px !important;
+  border: none;
+  color: #fff;
+  background-color: rgb(20, 133, 170) !important;
+  /* background: transparent !important; */
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  cursor:pointer;
+}
+.flight:hover{
+  background: rgb(173, 68, 86)!important;
+  /*background: rgb(9, 136, 9) !important;*/
+  color: rgb(255, 255, 255) !important;
+  transition: 0.5s;
+}
+h1{
+  font-size: 50px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+  font-family: poppins;
+}

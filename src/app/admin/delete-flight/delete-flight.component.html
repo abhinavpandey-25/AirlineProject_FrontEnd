@@ -1,0 +1,35 @@
+<body>
+    
+
+    <div class="container mt-2"><br>
+        <div class="row">
+            <div class="col-9 mb-3 booking-form" >
+                <input class="form-control" type="number" [(ngModel)]="flightId" placeholder="Enter flight ID">
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary flight"  (click)="onSearch()">SEARCH</button>
+            </div>           
+        </div>
+    </div>
+    
+    <div class="container mt-2">
+        <table class="table table-bordered table-hover" [hidden] = "viewTable">
+            <thead style="background-color: cornflowerblue">
+                <tr>
+                    <th>FLIGHT ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody  style="font-family: 'Kaushan Script', cursive; background-color: cadetblue;">
+                <tr  >
+                    <td>{{flight.flightId}}</td>
+                
+                    <td> <button class=" btn btn-primary flight delhov" (click)="deleteRow(flight.flightId)">DELETE</button></td>
+                  
+                       
+                </tr>
+            </tbody>
+        </table>
+        <div [hidden] = "deleted" style="color: red;"><h2>Flight deleted</h2></div>
+    </div> 
+    </body>

@@ -1,0 +1,126 @@
+<body>
+
+    <div class="booking-form-box">
+        <div class="container" class="booking-form">
+            <h1>ADD FLIGHT</h1>
+            <form [formGroup]="addFlight1"  (ngSubmit)="onSubmit()">
+                <div class="input-grp">
+                    <label for="flightName">ENTER FLIGHT NAME</label>
+                    <input formControlName="flightName" type="text" class="form-control" id="flightName"
+                        placeholder="FlightName" />
+                        <div *ngIf="submitted && addFlight1.controls.flightName.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.flightName.errors.required">Flight Name is required</div>														
+                          </div>
+                </div>
+                <br>
+                <div style="width: 223px; margin-right: 10px;" class="input-grp">
+                    <label for="source">ENTER SOURCE</label>
+                    <select class="form-control" id="source"   formControlName="source"  placeholder="Source">
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                    <div *ngIf="submitted && addFlight1.controls.source.errors" class="error">														
+                        <div class="text-danger" *ngIf="addFlight1.controls.source.errors.required">Source is required</div>														
+                      </div>
+                </div>
+                
+                <div style="width: 225px;" class="input-grp">
+                    <label for="destination">ENTER DESTINATION</label>
+                    <select class="form-control" id="destination" formControlName="destination"  placeholder="Destination">
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
+                    <div *ngIf="submitted && addFlight1.controls.destination.errors" class="error">														
+                        <div class="text-danger" *ngIf="addFlight1.controls.destination.errors.required">Destination is required</div>														
+                      </div>
+                </div>
+                <br>
+                <div style="width: 223px; margin-right: 10px;" class="input-grp">
+                    <label for="departureDate">ENTER DEPARTURE DATE</label>
+                    <input formControlName="departureDate" type="date" class="form-control select-date"
+                        id="departureDate" placeholder="DepartureDate" />
+                        <div *ngIf="submitted && addFlight1.controls.departureDate.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.departureDate.errors.required">Departure Date is required</div>														
+                          </div>
+                </div>
+
+                <div style="width: 225px;" class="input-grp">
+                    <label for="departureDate">ENTER DEPARTURE TIME</label>
+                    <input formControlName="departureTime" type="text" class="form-control" id="departureTime"
+                    placeholder="DepartureTime: 00:00" />
+                    <div *ngIf="submitted && addFlight1.controls.departureTime.errors" class="error">														
+                        <div class="text-danger" *ngIf="addFlight1.controls.departureTime.errors.required">Departure Time is required</div>														
+                      </div>
+                </div>
+                <br>
+                <div style="width: 223px; margin-right: 10px;" class="input-grp">
+                    <label for="arrival">ENTER ARRIVAL DATE</label>
+                    <input formControlName="arrivalDate" type="date" class="form-control select-date" id="arrivalDate"
+                        placeholder="ArrivalDate" />
+                        <div *ngIf="submitted && addFlight1.controls.arrivalDate.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.arrivalDate.errors.required">Arrival Date is required</div>														
+                          </div>
+                </div>
+            
+                <div style="width: 225px;" class="input-grp">
+                    <label for="departure">ENTER ARRIVAL TIME</label>
+                    <input formControlName="arrivalTime" type="text" class="form-control" id="arrivalTime"
+                        placeholder="ArrivalTime: 00:00" />
+                        <div *ngIf="submitted && addFlight1.controls.arrivalTime.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.arrivalTime.errors.required">Arrival Time is required</div>														
+                          </div>
+                </div>
+                <br>
+                <div style="width: 223px; margin-right: 10px;" class="input-grp">
+                    <label for="economicSeats">ENTER ECONOMY SEATS</label>
+                    <input formControlName="economicSeats" type="number" class="form-control" id="economicSeats"
+                        placeholder="EconomicSeats" />
+                        <div *ngIf="submitted && addFlight1.controls.economicSeats.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.economicSeats.errors.required">Economy seats number is required</div>														
+                          </div>
+                </div>
+                
+                <div style="width: 225px;" class="input-grp">
+                    <label for="businessSeats">ENTER BUSINESS SEATS</label>
+                    <input formControlName="businessSeats" type="number" class="form-control" id="businessSeats"
+                        placeholder="BusinessSeats" />
+                        <div *ngIf="submitted && addFlight1.controls.businessSeats.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.businessSeats.errors.required">Business Seats number is required</div>														
+                          </div>
+                </div>
+                <br>
+                <div style="width: 223px; margin-right: 10px;" class="input-grp">
+                    <label for="economyCost">ENTER ECONOMY COST</label>
+                    <input formControlName="economyCost" type="number" class="form-control" id="economyCost"
+                        placeholder="EconomyCost" />
+                        <div *ngIf="submitted && addFlight1.controls.economyCost.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.economyCost.errors.required">Economy Cost is required</div>														
+                          </div>
+                </div>
+                
+                <div style="width: 225px;" class="input-grp">
+                    <label for="businessCost">ENTER BUSINESS COST</label>
+                    <input formControlName="businessCost" type="number" class="form-control" id="businessCost"
+                        placeholder="BusinessCost" />
+                        <div *ngIf="submitted && addFlight1.controls.businessCost.errors" class="error">														
+                            <div class="text-danger" *ngIf="addFlight1.controls.businessCost.errors.required">Business Cost is required</div>														
+                          </div>
+                </div>
+                
+                <br>
+                <br>
+                <div [hidden] = "added" style="color: green;"><h2>Flight added </h2></div>
+                
+                <div class="input-grp button">
+                    <button class="btn btn-primary flight" type="submit">ADD FLIGHT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

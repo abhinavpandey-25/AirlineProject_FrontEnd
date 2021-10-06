@@ -1,0 +1,15 @@
+
+.spacer{
+    flex:1 1 auto;
+    
+}
+.fab{
+    background-color: lightgrey;
+    width:fit-content;
+    height: fit-content;
+}
+.myClass1{
+    background-color: lightgrey;
+    width: 100%;
+    color: black;
+}

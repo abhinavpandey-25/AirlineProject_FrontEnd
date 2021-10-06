@@ -1,0 +1,48 @@
+.box{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), url("src/assets/Background_homepage.jpeg");  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
+blockquote{
+  quotes: "“" ;
+  font-size: 1.4em;
+  width:60%;
+  left: 0;
+  margin:25px;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid black ;
+  line-height:1.6;
+  position: relative;
+  background:transparent;
+  color:lightgray
+}
+
+blockquote::before{
+    content: open-quote;
+    font-family:Arial;
+    color:black;
+     font-size:4em;
+    position: absolute;
+    left: 10px;
+    top:-10px;  
+}
+
+
+blockquote span{
+  display:block;
+  color:#000000;
+  font-style: normal;
+  font-size: x-large;
+  font-weight: bold;
+  margin-top:1em;
+}

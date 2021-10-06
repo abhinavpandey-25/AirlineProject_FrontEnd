@@ -1,0 +1,23 @@
+.spacer
+{
+    flex: 1 1 auto;
+}
+
+.mat-toolbar{
+    background-color: black;
+    color:white;
+    position: fixed;
+    z-index: 8;
+}
+.bord
+{
+    color: white;
+    background-color: black;  
+    margin: 7px;
+    width: 100px;
+ 
+}
+.bord:hover {
+    background-color: white;
+    color:black;
+}

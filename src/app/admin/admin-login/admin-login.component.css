@@ -1,0 +1,116 @@
+.container
+{
+    max-width: 1000px;
+    border: 1px solid white;
+    margin-left:20%;
+ 
+}
+
+
+.btn .btn-success
+{
+    margin-left: 20px;
+    display: inline-block;
+    flex: 1 1 auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: montserrat;
+    box-sizing: border-box;
+  }
+  input::placeholder{
+    color:#fff
+  }
+  body{
+    min-height: 100vh;
+    background-image: linear-gradient(180deg,#080808,#8e44ad);
+  
+  }
+  
+  .login-form{
+    width: 360px;
+    background: #f1f1f1;
+    height: 580px;
+    padding: 80px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .login-form h1{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .txtb{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+  }
+  
+  .txtb input{
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+  }
+  
+  
+  
+  
+  
+  .logbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(120deg,#8e44ad,#101111);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    
+    transition: .5s;
+  }
+  
+  .logbtn:hover{
+    background-position: right;
+  }
+  
+  .bottom-text{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .form-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto auto;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 480px;
+  }
+  .form-box .header-text {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    text-align: center;
+    color:white
+  }

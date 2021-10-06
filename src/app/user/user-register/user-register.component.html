@@ -1,0 +1,70 @@
+<app-home-dashboard></app-home-dashboard>
+<body>
+<div class="form-box" style="position: absolute; top:200px">
+    <div class="header-text">
+        Signup Form
+      </div>
+  <form  autocomplete="off" [formGroup]="userForm"  (ngSubmit)="onSubmit()" >
+    <div style="margin-bottom: 20px;margin-left: 150px; padding: 5px;">
+
+        <label for="title" style="font-size: 18px; color: #adadad; ">Title</label>
+        
+        <select name="title" formControlName="title">
+            <option value="Mr">Mr.</option>
+            <option value="Ms">Ms.</option>
+        </select>
+    </div>
+    <div class="txtb">
+     
+      <input  formControlName="firstName" type="text" class="form-control"  placeholder="First Name" />
+      <div *ngIf="submitted && userForm.controls.firstName.errors" class="error">
+        <div class="text-danger" *ngIf="userForm.controls.firstName.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <div class="txtb">
+   
+      <input formControlName="lastName" type="text" class="form-control"  placeholder="Last Name" />
+      <div *ngIf="submitted && userForm.controls.lastName.errors" class="error">
+        <div class="text-danger" *ngIf="userForm.controls.lastName.errors.required">Last Name is required</div>
+      </div>
+    </div>
+    <div class="txtb">
+
+      <input formControlName="email" type="email" class="form-control"  placeholder="Email">
+      <div *ngIf="submitted && userForm.controls.email.errors" class="error">
+        <div class="text-danger" *ngIf="userForm.controls.email.errors.required">
+          Email is required
+        </div>
+      </div>
+      </div>
+      <div  class="txtb">
+        <input formControlName="password" type="password" class="form-control"  placeholder="Password"/>
+        <div  *ngIf="submitted && userForm.controls.password.errors" class="error">
+         <div class="text-danger" *ngIf="userForm.controls.password.errors.required" >
+           Enter minimum 8 characters
+         </div>
+        </div>
+      </div>
+      
+        <div  class="txtb">
+            <input formControlName="phoneNumber"  class="form-control"  placeholder="Contact Number"/>
+            <div  *ngIf="submitted && userForm.controls.phoneNumber.errors" class="error">
+              <div class="text-danger" *ngIf="userForm.controls.phoneNumber.errors.required">
+
+                Enter valid phoneNumber
+              </div>
+            </div>
+          </div>
+        <div class="txtb">
+            <input formControlName="dob" type="date" class="form-control"  placeholder="Date Of Birth"/>
+            <div  *ngIf="submitted && userForm.controls.dob.errors" class="error">
+             <div class="text-danger" *ngIf="userForm.controls.dob.errors.required">
+               Enter valid dob
+
+             </div>
+            </div>
+          </div>
+          <div > <button class="logbtn" style="margin: 20px 0px;" type="submit">SUBMIT</button></div>
+  </form>
+</div>
+</body>

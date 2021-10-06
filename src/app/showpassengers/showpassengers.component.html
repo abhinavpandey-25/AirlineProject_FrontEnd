@@ -1,0 +1,30 @@
+<app-user-nav></app-user-nav>
+<body>
+<br><br><br><br><br>
+<table   style="border: 2px solid black;" class=" table table-bordered table-hover table-striped ">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            
+            <thead style="background-color: cornflowerblue;">
+        
+    
+    <th  style="border: 2px solid black;">P_NAME</th>
+    <th style="border: 2px solid black;">P_AGE</th>
+    <th style="border: 2px solid black;">P_GENDER</th>
+    <th style="border: 2px solid black;">P_SEATNO</th>
+            </thead>
+            <tbody  style="font-family: 'Kaushan Script', cursive; background-color: cadetblue;">
+     
+    <tr *ngFor="let passenger of passengerList; let index ">
+        <td style="border: 2px solid black;">{{passenger.name}}</td>
+        <td style="border: 2px solid black;">{{passenger.passengerAge}}</td>
+        <td style="border: 2px solid black;">{{passenger.gender}}</td>
+        <td style="border: 2px solid black;">{{passenger.seatNo}}</td>
+        
+    </tr>
+    </tbody>
+</table>
+    
+    </body>

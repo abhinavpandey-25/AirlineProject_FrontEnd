@@ -1,0 +1,154 @@
+<body>
+    <marquee style="color: aliceblue;font-size: xx-large;" behavior="alternate" scrollamount="20" bgcolor="#003366" >*** SEARCH AND BOOK YOUR TICKET HERE ***</marquee>
+    <br>
+    <br>
+     <div style="display: flex;">
+        
+   <!-- <div color=white; class="blink" style="font-size: xxx-large; margin-left: 50px;margin-top: 300px; font-style: italic;font-weight: 1900;font-family: comic sons;font-size: 60px;">Search Your Next Destination</div>-->
+        
+    <div style="margin-left: 900px;" class="booking-form-box">
+    
+    <div class="container booking-form" [hidden]="!flightSearched">
+        <h1 style="color: cornsilk; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:40px;" ><div class="blink">SEARCH FLIGHT HERE</div></h1>
+        <form  [formGroup]="searchFlight"  (ngSubmit)="onSearch()">
+            <br>
+            <div class="form-group input-grp ">
+                <fieldset style="color: cornsilk; font-size: 20px;" for="source">Flying From</fieldset>
+                <select class="form-control"  id="source"  name="title"  formControlName="source" placeholder="SOURCE">
+                    <option value="">Select Departure City</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group input-grp">
+                <fieldset style="color: cornsilk; font-size: 20px;" for="destination" >Flying To</fieldset>
+                <select class="form-control"  id="destination"  name="title"  formControlName="destination" placeholder="DESTINATION">
+                    <option value="">Select Destination City</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group input-grp">
+                <fieldset style="color: cornsilk; font-size: 20px;" for="departureDate">Enter Departure Date</fieldset>
+                <input formControlName="departureDate" type="date" class="form-control" id="departureDate"
+                    placeholder="DEPARTURE DATE" />
+            </div>
+            <br>
+            <div class="form-group input-grp">
+                <fieldset style="color: cornsilk; font-size: 20px;" for="noOfPassengers">No Of Passengers</fieldset>
+                <input formControlName="noOfPassengers" type="number" class="form-control" id="noOfPassengers"
+                    placeholder="No Of Passengers" />
+            </div>
+            <br>
+            <div class="form-group input-grp">
+                <fieldset style="color: cornsilk; font-size: 20px;" for="travelClass">Travel Class</fieldset>
+                <select class="form-control"  id="travelClass"  name="title"  formControlName="travelClass" placeholder="Economy OR Business">
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                </select>
+                   
+            </div>
+            <br>
+    
+            <button  class="btn btn-primary flight"><span>SEARCH FLIGHT</span></button>
+        </form>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="searchbooking-form-box">
+
+    <div *ngIf="sf.travelClass=='economy'" >
+       
+        <table   class="table table-hover ">
+            <thead style="background-color: rgb(192, 17, 17);" class="tablea">
+                <tr class="tablea">
+                    <th class="tablea">FLIGHT ID</th>
+                    <th class="tablea">FLIGHT NAME</th>
+                    <th class="tablea">SOURCE</th>
+                    <th class="tablea">DESTINATION</th>
+                    <th class="tablea">DEPARTURE DATE & TIME</th>
+                    <th class="tablea">ARRIVAL DATE & TIME</th>
+                    <th class="tablea">ECONOMY SEATS</th>
+                    <th class="tablea">ECONOMY SEAT COST</th>
+                    <th class="tablea">Book Flight</th>
+                  
+                </tr>
+            </thead>
+         
+            <tbody style="background-color: darkorange;" class="tablea">
+                
+                <tr *ngFor="let flight of flightList">
+                    <td class="tablea">{{flight.flightId}}</td>
+                    <td class="tablea">{{flight.flightName}}</td>
+                    <td class="tablea">{{flight.source}}</td>
+                    <td class="tablea">{{flight.destination}}</td>
+                    <td class="tablea">{{flight.departureDate}} {{flight.departureTime}}</td>
+                    <td class="tablea">{{flight.arrivalDate}} {{flight.arrivalTime}}</td>
+                    <td class="tablea">{{flight.economicSeats}}</td>
+                    <td class="tablea">{{flight.economyCost}}</td>
+                   <td class="tablea"><button [disabled]="booked" class="btn btn-success"  (click)="getDetails(flight.flightId)">Book Now</button></td> 
+    
+                    
+                       
+                </tr>
+            
+            </tbody>
+       
+        </table>
+    
+    </div>
+    
+    
+    
+    
+    <div *ngIf="sf.travelClass=='business'" class="container mt-2">
+    
+        <table class="table table-hover ">
+            <thead style="background-color: rgb(192, 17, 17);" class="tablea">
+                <tr>
+                    <th class="tablea">FLIGHT ID</th>
+                    <th class="tablea">FLIGHT NAME></th>
+                    <th class="tablea">SOURCE></th>
+                    <th class="tablea">DESTINATION</th>
+                    <th class="tablea">DEPARTURE DATE & TIME</th>
+                    <th class="tablea">ARRIVAL DATE & TIME</th>
+                    <th class="tablea">BUSINESS SEATS</th>
+                    <th class="tablea">BUSINESS SEAT COST</th>
+                    <th class="tablea">Book Flight</th>
+                  
+                </tr>
+            </thead>
+         
+            <tbody style="background-color: darkorange;" class="tablea">
+                
+                <tr *ngFor="let flight of flightList; let i = index;">
+                    <td class="tablea">{{flight.flightId}} </td>
+                    <td class="tablea">{{flight.flightName}}</td>
+                    <td class="tablea">{{flight.source}}</td>
+                    <td class="tablea">{{flight.destination}}</td>
+                    <td class="tablea">{{flight.departureDate}} {{flight.departureTime}}</td>
+                    <td class="tablea">{{flight.arrivalDate}} {{flight.arrivalTime}}</td>
+                    <td class="tablea">{{flight.businessSeats}}</td>
+                    <td class="tablea">{{flight.businessCost}}</td>
+                    <td class="tablea"><button [disabled]="booked" class="btn btn-success btn-sm"  (click)="getDetails(flight.flightId)">Book Now</button></td> 
+                    
+                       
+                </tr>
+            
+            </tbody>
+       
+        </table>
+    
+    </div>
+    </div>
+</body>

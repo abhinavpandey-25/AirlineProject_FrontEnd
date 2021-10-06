@@ -1,0 +1,72 @@
+<!-- 
+<div><app-home-dashboard></app-home-dashboard></div>
+
+
+
+<body> -->
+
+    <!-- <div class="login-form">
+        <h1 style="font-size: 45px;">Login</h1>
+    
+        <div class="txtb">
+          <input type="email" placeholder="email" [(ngModel)]="email" required>
+         
+        </div>
+    
+        <div class="txtb">
+          <input type="password" placeholder="Password" [(ngModel)]="password">
+          
+        </div>
+        <div  *ngIf = "bol" class="bottom-text" style="color: red;">Please enter valid credentials</div>
+        <input type="submit" class="logbtn" value="Login" (click)="loginUser()">
+        
+        <div class="bottom-text">
+          Don't have account? <a href= "userReg">Sign up</a>
+        </div>
+
+        <div class="bottom-text">
+            You are an admin?
+            <a href = "/adminLogin" routerLinkActive="active">Click here</a>
+        </div> 
+    
+    </div>-->
+    <!DOCTYPE html>
+    <!--www.codingflicks.com--> 
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link  rel="stylesheet">
+    </head>
+    <body>
+      <div>
+        <app-home-dashboard></app-home-dashboard></div>
+
+      <div class="form-box">
+        <div style="text-align: center; font-size: 35px; padding-bottom:10px">
+          Login Form
+        </div>
+        <input placeholder="Your Email Address" [(ngModel)]="email" required type="text">
+         <input placeholder="Your Password" [(ngModel)]="password" type="password">
+          <!-- <input id="terms" type="checkbox">  -->
+          <!-- <label for="terms"></label> -->
+          <!-- <span>Agree with <a href="#">Terms & Conditions</a></span>  -->
+          <input type="submit" class="logbtn" style="font-size: 25px; font-weight: 500; margin-bottom: 5px;" value="Login" (click)="loginUser()">
+          <div  *ngIf = "bol" class="bottom-text" style="color: red;">Please enter valid credentials</div>
+          <div class="bottom-text">
+            You are an admin?
+            <a href = "/adminLogin" >Click here</a>
+        </div> 
+        <div class="bottom-text">
+          Don't have account? <a href= "userReg">Sign up</a>
+        </div>
+        </div>
+    </body>
+    </html>
+    
+ 
+<!--           
+</body> -->
+
+
+
+

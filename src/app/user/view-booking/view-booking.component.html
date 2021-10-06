@@ -1,0 +1,52 @@
+<app-user-nav></app-user-nav>
+
+ 
+<body>
+    
+
+  <div class="container mt-2" >
+        <table class="table table-bordered table-hover table-striped ">
+            <col style="width:10%">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 8%">
+            <col style="width: 15%">
+            <col style="width: 11%">
+            <col style="width: 11%">
+            <col style="width: 8%">
+            <thead style="background-color: cornflowerblue;">
+                <tr>
+                    <th>Show Passengers</th>
+                    <th>Name</th>
+                    <th>Booking Id</th>
+                    <th>Flight Id</th>
+                    <th>User Id</th>
+                    <th>Class</th>    
+                    <th>Status</th>    
+                    <th>No of Passengers</th>
+                    <th>Convenience Fees</th> <th>Total Cost</th>    
+                    <th>Action</th>                  
+                </tr>
+            </thead>
+            <tbody  style="font-family: 'Kaushan Script', cursive; ">
+                  <tbody  *ngFor="let b of bookingList; ">
+                        
+                    <td [routerLink]="['/showPassengers',b.bookingId]">Show Bookings </td>
+                         <td style="color: black; font-size: 18px; "> {{b.user.firstName}} </td>            
+                         <td style="color :black ;font-size: 18px;"> {{b.bookingId}} </td>
+                         <td style="color :black ;font-size: 18px;"> {{b.flight.flightId}} </td>
+                         <td style="color :black ;font-size: 18px;"> {{b.user.userId}} </td>  
+                         <td style="color :black ;font-size: 18px;"> {{b.travelClass}} </td>     
+                         <td style="color :black ;font-size: 18px;"> {{b.bookingStatus}} </td> 
+                         <td style="color :black ;font-size: 18px;"> {{b.noOfPassengers}} </td>     
+                         <td style="color :black ;font-size: 18px;"> {{b.refundAmount}}</td>
+                         <td style="color :black ;font-size: 18px;"> {{b.totalCost}} </td>   
+                         <td><button class="btn btn-danger" [hidden] = "bremove" (click) = "cancelBooking(b.bookingId)">Cancel Booking</button></td>                             
+            </tbody>
+        </table>
+    </div>
+    </body> 
+    
+    

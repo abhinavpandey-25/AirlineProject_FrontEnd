@@ -1,0 +1,46 @@
+<body>
+    <div class="container rounded mt-5 bg-white p-md-20">
+      
+        <div class="table-responsive">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th scope="col">FLIGHT NO</th>
+                        <th scope="col">FLIGHT NAME</th>
+                         <th scope="col">SOURCE</th>
+                        <th scope="col">DESTINATION</th>
+                        <th scope="col">DEPARTURE DATE/TIME</th>
+                        <th scope="col">ARRIVAL DATE/TIME</th>
+                        <th scope="col"  >ECONOMY SEATS</th>
+                        <th scope="col">BUSINESS SEATS</th>
+                        <th scope="col">ECONOMY SEAT COST</th>
+                        <th scope="col">BUSINESS SEAT COST</th> 
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-blue" *ngFor="let f of flightList">
+                        
+                            <td class="pt-3 mt-1">{{f.flightId}}</td>
+                            <td>{{f.flightName}}</td>
+                            <td>{{f.source}}</td>
+                            <td>{{f.destination}}</td>
+                            <td>{{f.departureDate}} {{f.departureTime}}</td>
+                            <td>{{f.arrivalDate}} {{f.arrivalTime}}</td>
+                            <td>{{f.economicSeats}}</td>
+                            <td>{{f.businessSeats}}</td>
+                            <td>{{f.economyCost}}</td>
+                            <td>{{f.businessCost}}</td> 
+                           
+                        </tr>
+                        
+                        <tr class="e" id="spacing-row">
+                            <td></td>
+                        </tr>
+                     
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>

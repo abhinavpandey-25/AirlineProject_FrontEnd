@@ -1,0 +1,21 @@
+<body><br>
+    <div class="container">
+        <table style="color: rgb(8, 8, 26);text-align: center ;" class="table table-striped table-bordered tablea">
+            <thead class="tablea">
+                <tr class="tablea">
+                    <th class="tablea">ID</th>
+                    <th class="tablea">TITLE</th>
+                    <th class="tablea">FIRST NAME</th>                
+                </tr>
+            </thead>
+            <tbody class="tablea">
+                  <tr *ngFor="let u of userList;">              
+                    <td class="tablea"> {{u.userId}} </td>
+                    <td class="tablea"> {{u.title}} </td>
+                    <td class="tablea"> {{u.firstName}} </td>                        
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body> 

@@ -1,0 +1,13 @@
+body{font-family: Arial, "Helvetica Neue", Helvetica, sans-serif ;
+    background-image: url("../../assets/airplane4.jpg")  ;
+    
+    background-size: cover;
+  
+   
+}
+.tablea{border:1px solid black;
+    border-color: black !important;
+    border-style: solid !important;
+  /*  background: transparent !important;
+box-shadow: none !important; */
+}

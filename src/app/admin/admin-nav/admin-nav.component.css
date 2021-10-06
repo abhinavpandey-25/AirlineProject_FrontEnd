@@ -1,0 +1,10 @@
+.spacer{
+    flex:1 ;
+}
+#id{
+   color: palevioletred;
+}
+.mat-toolbar{
+    background-color: black;
+    color:white;
+}
